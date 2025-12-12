@@ -22,4 +22,17 @@ response = requests.get(url)
 soup = BeautifulStoneSoup(response.text,"html.parser")
 
 
+#You ask BeautifulSoup:
+
+#“Find all the HTML elements where
+#tag = <article>
+#and class = product_pod.”
+
+#Why?
+#Because each book on the page is inside a block like this:
+
+#<article class="product_pod">
+#    ...
+#</article>
+
 books = soup.find_all("article" , class_="product_pod") 
