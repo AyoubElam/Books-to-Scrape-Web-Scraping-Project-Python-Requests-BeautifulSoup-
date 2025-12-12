@@ -19,7 +19,7 @@ url = "https://books.toscrape.com/catalogue/page-1.html"
 
 response = requests.get(url)
 
-soup = BeautifulStoneSoup(response.text,"html.parser")
+soup = BeautifulStoneSoup(response.text,"html.parser") # pyright: ignore[reportUndefinedVariable]
 
 
 #You ask BeautifulSoup:
